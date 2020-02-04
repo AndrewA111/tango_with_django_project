@@ -13,7 +13,7 @@ class CategoryForm(forms.ModelForm):
         fields = ('name',)
 
 class PageForm(forms.ModelForm):
-    title = forms.CharField(max_length=128,
+    title = forms.CharField(max_length=Page.TITLE_MAX_LENGTH,
                           help_text="Please enter the title of the page.")
     url = forms.URLField(max_length=200,
                          help_text="Please enter the title URL of the page.")
